@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二手房</title>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+</head>
+<body>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="width: 1000px;height:400px;position: center;"></div>
+
+<div >
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+    option = {
+        title: {
+                  text: '西安市各区二手房均价',
+            x:'center'
+                },
+        xAxis: {
+            type: 'category',
+            data: ['高陵','长安','经开区','未央',
+                        '西安周边','碑林','雁塔','莲湖'
+                     ,'西咸新区','高新区','浐灞','曲江新区','灞桥','临潼'],
+            axisLabel: {
+                interval:0,
+                rotate:40
+            }
+        },
+        yAxis: {
+            type: 'value',
+            max:26200
+        },
+        series: [{
+            data: [9179, 19517, 15952, 12949, 8635, 16362,14707,
+                        14932,14534,18091,15783,26200,12448,8130],
+            type: 'bar'
+        }]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+</div>
+</body>
+</html>

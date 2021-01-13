@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>房价预测</title>
+
+    <link rel="stylesheet" type="text/css" href="css/forecast.css">
+    <script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts.min.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts.min.js"></script>
+</head>
+
+<body>
+<div class="inou">
+<input id="Input" type="text" placeholder="请输入要预测下的一年月份">
+<input type="submit" onclick="submit()" >
+<script type="text/javascript" src="js/forecast.js"></script>
+<script>
+    function submit(){
+        var x = $('#Input').val();
+        var y =57.348 *x + 11896.692;
+        alert("本月房价预测为:"+y.toFixed(2)+"元")
+
+    }
+</script>
+</div>
+
+</body>
+
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main1" style="width: 900px;height:400px;"></div>
+<div class="huatu">
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main1'));
+
+        // 指定图表的配置项和数据
+        option = {
+            title: {
+                text:'2020年西安房价走势',
+                x:'center'
+            },
+            xAxis: {
+                type: 'category',
+                data: ['一月', '二月', '三月', '四月', '五月', '六月', '七月','八月','九月'
+                ,'十月','十一月','十二月']
+            },
+            yAxis: {
+                type: 'value',
+                max:'13000',
+                scale:true
+            },
+            series: [{
+                data: [12590,12762,12825,12575,12485,12481,12512,12607,12618,12659,12673,12744],
+                type: 'line',
+                itemStyle:{normal:{label:{show:true}}}
+
+            }]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</div>
+</html>

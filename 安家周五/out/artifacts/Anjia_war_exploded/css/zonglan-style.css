@@ -1,0 +1,14 @@
+#contain {
+    background-color: silver;
+}
+form {
+    text-align: center;
+    z-index: 999;
+    font-family: Georgia, serif;
+}
+input option {
+    font-family: Georgia, serif;
+}
+.fen {
+    margin-top: 10px;
+}

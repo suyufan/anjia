@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>房价总览</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript">
+	addEventListener("load", function () {
+		setTimeout(hideURLbar, 0);
+	}, false);
+
+	function hideURLbar() {
+		window.scrollTo(0, 1);
+	}
+</script>
+    <!-- bootstrap-css -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!--// bootstrap-css -->
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <!--// css -->
+    <!-- font-awesome icons -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <!-- font -->
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:200,200i,300,400,400i,500,600,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+        rel="stylesheet">
+    <!-- //font -->
+
+    <!--overview.css-->
+    <link href="css/zonglan-style.css" rel="stylesheet"/>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/zonglan.js"></script>
+</head>
+
+<body>
+    <div class="inner_agile_pages">
+        <div class="main_agileits">
+            <div class="agile_wthree_nav">
+                <nav class="navbar navbar-default">
+                    <div class="navbar-header navbar-left">
+                        <h1><a class="navbar-brand" href="index_bak.html"><span><img src="images/logo.png"
+                                                                                     style="height: 50px;width: 50px;"></span>安家</a></h1>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+
+                    
+                        <!-- //cd-search -->
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- //banner -->
+    <div id="main">
+        <form action="#" method="post">
+            <div class="year">
+                年限：
+                <select id="years">
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                </select>
+                &nbsp; &nbsp;
+                <input type="button" value="查询" onclick="search()">
+                <br>
+            </div>
+            <div class="fen">
+                分类：
+                <input type="checkbox" value="new" name="home">新房
+                <input type="checkbox" value="old" name="home">二手房
+                &nbsp; &nbsp;
+                <input type="button" value="分析" onclick="anaylze()">
+                <br>
+            </div>
+        </form>
+        <div id="mainContent"></div>
+        <iframe align="center" width="100%" height="500px" src="data/2020-2016.html" frameborder="no"
+            id="myiframe"></iframe>
+    </div>
+
+
+</body>
+
+</html>

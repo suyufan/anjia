@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title></title>
+        <script src="echarts.js"></script>
+        <script>
+            window.onload = function () {
+                option = {
+                    xAxis: {
+                        type: 'category',
+                        data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月','8月','9月','10月','11月','12月']
+                    },
+                    name: {
+                        textStyle: {
+                            color: '#fff',
+                            backgroundColor: '#999',
+                            borderRadius: 3,
+                            padding: [3, 5]
+                        }
+                    },
+        
+                    yAxis: {
+                        type: 'value',
+                        max:'7000',
+                        scale:true
+                    },
+                    series: [{
+                        data: [6751,6791,6794,6825,6832,6890,6903,6920,6959,6940,6877,6792],
+                        type: 'line',
+                        itemStyle:{normal:{label:{show:true}}}
+                    }]
+                };
+                //获取dom容器
+                var myChart = echarts.init(document.getElementById('img'));
+                // 使用刚指定的配置项和数据显示图表。
+                myChart.setOption(option);
+        
+            }
+        </script>
+    </head>
+    <body>
+        <div id="img" style="height:600px"></div>
+    </body>
+</html>

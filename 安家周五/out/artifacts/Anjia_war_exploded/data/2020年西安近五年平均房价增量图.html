@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2020西安房价与近五年相比增量图</title>
+</head>
+<div id="img" style="height:600px"></div>
+<script src="echarts.js"></script>
+<script>
+    window.onload = function () {
+        option = {
+            xAxis: {
+                type: 'category',
+                data: ['2020vs2016', '2020vs2017', '2020vs2018', '2020vs2019']
+            },
+            name: {
+                textStyle: {
+                    color: '#fff',
+                    backgroundColor: '#999',
+                    borderRadius: 3,
+                    padding: [3, 5]
+                }
+            },
+
+            yAxis: {
+                type: 'value'
+            },
+            series: [{
+                data: [6209.666667,5034.5, 1358.833333,85.33333333],
+                type: 'line',
+                itemStyle : { normal: {label : {show: true}}}
+            }]
+        };
+        //获取dom容器
+        var myChart = echarts.init(document.getElementById('img'));
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+
+    }
+</script>
+
+<body>
+
+</body>
+</html>
